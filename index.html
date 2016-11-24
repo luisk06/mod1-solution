@@ -3,16 +3,17 @@
   <head>
     <meta charset="utf-8">
     <script src="angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
     <title>Mod 1 Coding</title>
   </head>
-  <body ng-app="mod1App">
-  <div ng-controller="foodController">
+  <body ng-app="LunchCheck">
+  <div ng-controller="LunchCheckController">
       <h1>What are you going to eat for lunch?</h1>
       <br>
-      <h2>Ingredients comma separated :</h2>
+      <h2>Type the items in the textbox (comma-separated) :</h2>
       <input type="text" ng-model="foodList">
-      <button type="button" ng-click="calculateAmount">Check if Too Much</button>
-      <p>{{messageFood}}</p>
+      <button type="button" ng-click="calculateAmount()">Check if Too Much</button>
+      <p ng-style="messageColor">{{messageFood}}</p>
     </div>
   </body>
 </html>
