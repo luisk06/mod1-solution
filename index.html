@@ -2,9 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Without title</title>
+    <script src="angular.min.js" charset="utf-8"></script>
+    <title>Mod 1 Coding</title>
   </head>
-  <body>
-    The future is now.. 2edgy?
+  <body ng-app="mod1App">
+  <div ng-controller="foodController">
+      <h1>What are you going to eat for lunch?</h1>
+      <br>
+      <h2>Ingredients comma separated :</h2>
+      <input type="text" ng-model="foodList">
+      <button type="button" ng-click="calculateAmount">Check if Too Much</button>
+      <p>{{messageFood}}</p>
+    </div>
   </body>
 </html>
