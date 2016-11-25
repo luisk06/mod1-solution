@@ -11,6 +11,13 @@
 
         var food = $scope.foodList;
         var foodSplit = food.split(","); //Create array with comma-separated element
+
+        var i = 0;
+        while (foodSplit[i]) {
+          foodSplit[i] = foodSplit[i].replace(/\s/g, '');
+          i++
+        }
+
         var FoodSplitValid = foodSplit.filter(String); //Taking out empty elements.. Ex [cucumber, bread ,, turkey]
         var totalFood = FoodSplitValid.length;
 
@@ -32,6 +39,5 @@
 
       }
     }
-
 
 })();
